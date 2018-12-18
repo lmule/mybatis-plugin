@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC
+        "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+
+<generatorConfiguration>
+    <properties  resource="application.properties" />
+    <!--数据库驱动jar -->
+    <classPathEntry
+            location="src/main/resources/db/mysql-connector-java-5.1.47.jar" />
+
+    <context id="Tables" targetRuntime="com.scaffold.bootservice.plugin.MyIntrospectedTableMyBatis3Impl">
+        <!--<plugin type="com.scaffold.bootservice.plugin.MyBaseServicePlugin">-->
+            <!--&lt;!&ndash;name:baseService的名称&ndash;&gt;-->
+            <!--<property name="name" value="BaseService"></property>-->
+            <!--&lt;!&ndash;name:baseService存放的包名&ndash;&gt;-->
+            <!--<property name="targetPackageBaseService" value="ibatisData.base"></property>-->
+            <!--&lt;!&ndash;baseService 实现存放的包&ndash;&gt;-->
+            <!--<property name="targetPackageBaseServiceImpl" value="ibatisData.base.impl"></property>-->
+            <!--&lt;!&ndash;baseService所在的工程&ndash;&gt;-->
+            <!--<property name="targetBaseServiceProject" value="src/test/java"></property>-->
+            <!--<property name="targetBaseServiceImplProject" value="src/test/java"></property>-->
+            <!--&lt;!&ndash;业务接口存放的包名&ndash;&gt;-->
+            <!--<property name="targetPackageBusinessService" value="ibatisData.bes"></property>-->
+            <!--&lt;!&ndash;业务接口的实现&ndash;&gt;-->
+            <!--<property name="targetPackageBusinessServiceImpl" value="ibatisData.bes.impl"></property>-->
+            <!--&lt;!&ndash;业务所在的工程&ndash;&gt;-->
+            <!--<property name="targetBusinessServiceProject" value="src/test/java"></property>-->
+
+            <!--&lt;!&ndash;业务所在的jjj工程&ndash;&gt;-->
+            <!--<property name="targetBusinessServiceImplProject" value="src/test/java"></property>-->
+
+            <!--<property name="searchString" value="Example"></property>-->
+            <!--<property name="replaceString" value="Criteria"></property>-->
+            <!--&lt;!&ndash;baseDao接口的完全限定名&ndash;&gt;-->
+            <!--<property name="baseDaoPackage" value="ibatisData.ff.BaseMapper"></property>-->
+        <!--</plugin>-->
+        <plugin type="com.scaffold.bootservice.plugin.XMLMapperMergePlugin" />
+        <plugin type="com.scaffold.bootservice.plugin.MyModelGeneratorPlugin" />
+        <plugin type="com.scaffold.bootservice.plugin.MyDaoGeneratorPlugin" />
+        <plugin type="com.scaffold.bootservice.plugin.MyServiceGeneratorPlugin">
+            <property name="rootClass" value="ibatisData.ff.BaseMapper"></property>
+            <property name="serviceSuffixName" value="Service"></property>
+            <property name="targetPackage" value="com.scaffold.bootservice.service"></property>
+            <property name="targetProject" value="src/main/java"></property>
+        </plugin>
+
+        <commentGenerator type="com.scaffold.bootservice.plugin.MyCommentGenerator">
+            <property name="suppressAllComments" value="false" />
+            <property name="addRemarkComments" value="true" />
+            <property name="suppressDate" value="true" />
+            <property name="classAnnotationFullyQualifiedNames" value="javax.persistence.Table" />
+        </commentGenerator>
+
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="${spring.datasource.url}"
+                        userId="${spring.datasource.username}"
+                        password="${spring.datasource.password}">
+        </jdbcConnection>
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="false" />
+        </javaTypeResolver>
+
+        <javaModelGenerator targetPackage="com.scaffold.bootservice.model.entity"
+                            targetProject="src/main/java">
+            <property name="enableSubPackages" value="true" />
+            <property name="trimStrings" value="true" />
+            <property name="rootClass" value="BaseModel" />
+
+            <property name="modelSuffixName" value="Model"></property>
+            <property name="modelTargetPackage" value="com.scaffold.bootservice.model"></property>
+            <property name="isOverwrite" value="true"></property>
+        </javaModelGenerator>
+
+        <sqlMapGenerator targetPackage="com.scaffold.bootservice.dao"
+                         targetProject="src/main/java">
+            <property name="enableSubPackages" value="false" />
+
+            <!--<property name="modelSuffixName" value="Model"></property>-->
+            <property name="daoSuffixName" value="Dao"></property>
+            <!--<property name="modelTargetPackage" value="com.scaffold.bootservice.model"></property>-->
+            <!--<property name="targetPackage" value="com.scaffold.bootservice.dao"></property>-->
+            <!--<property name="targetProject" value="src/main/java"></property>-->
+            <property name="isOverwrite" value="false"></property>
+            <property name="rootInterface" value="a.abc" />
+        </sqlMapGenerator>
+        <table tableName="user"
+        />
+    </context>
+</generatorConfiguration>

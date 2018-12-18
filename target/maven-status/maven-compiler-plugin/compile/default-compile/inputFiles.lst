@@ -1,0 +1,14 @@
+/Users/dingrui/workspace/github/bootservice/src/main/java/com/scaffold/bootservice/plugin/MyModelGeneratorPlugin.java
+/Users/dingrui/workspace/github/bootservice/src/main/java/com/scaffold/bootservice/plugin/MyDaoGeneratorPlugin.java
+/Users/dingrui/workspace/github/bootservice/src/main/java/com/scaffold/bootservice/plugin/IntrospectedTableHelper.java
+/Users/dingrui/workspace/github/bootservice/src/main/java/com/scaffold/bootservice/plugin/MyCommentGenerator.java
+/Users/dingrui/workspace/github/bootservice/src/main/java/com/scaffold/bootservice/plugin/ExistedXmlElementGenerator.java
+/Users/dingrui/workspace/github/bootservice/src/main/java/com/scaffold/bootservice/plugin/XMLMapperMergePlugin.java
+/Users/dingrui/workspace/github/bootservice/src/main/java/com/scaffold/bootservice/helper/AnnotationHelper.java
+/Users/dingrui/workspace/github/bootservice/src/main/java/com/scaffold/bootservice/plugin/MyServiceGeneratorPlugin.java
+/Users/dingrui/workspace/github/bootservice/src/main/java/com/scaffold/bootservice/plugin/PropertyHelper.java
+/Users/dingrui/workspace/github/bootservice/src/main/java/com/scaffold/bootservice/plugin/MyXMLMapperGenerator.java
+/Users/dingrui/workspace/github/bootservice/src/main/java/com/scaffold/bootservice/plugin/MyBaseServicePlugin.java
+/Users/dingrui/workspace/github/bootservice/src/main/java/com/scaffold/bootservice/plugin/MyIntrospectedTableMyBatis3SimpleImpl.java
+/Users/dingrui/workspace/github/bootservice/src/main/java/com/scaffold/bootservice/plugin/MyIntrospectedTableMyBatis3Impl.java
+/Users/dingrui/workspace/github/bootservice/src/main/java/com/scaffold/bootservice/Application.java

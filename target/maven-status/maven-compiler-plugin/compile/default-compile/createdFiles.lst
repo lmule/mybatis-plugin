@@ -1,0 +1,16 @@
+com/scaffold/bootservice/Application.class
+com/scaffold/bootservice/helper/AnnotationHelper.class
+com/scaffold/bootservice/plugin/MyXMLMapperGenerator.class
+com/scaffold/bootservice/plugin/MyBaseServicePlugin.class
+com/scaffold/bootservice/plugin/ExistedXmlElementGenerator$1.class
+com/scaffold/bootservice/plugin/MyDaoGeneratorPlugin.class
+com/scaffold/bootservice/plugin/ExistedXmlElementGenerator$NullEntityResolver.class
+com/scaffold/bootservice/plugin/MyIntrospectedTableMyBatis3SimpleImpl.class
+com/scaffold/bootservice/plugin/ExistedXmlElementGenerator.class
+com/scaffold/bootservice/plugin/MyServiceGeneratorPlugin.class
+com/scaffold/bootservice/plugin/XMLMapperMergePlugin.class
+com/scaffold/bootservice/plugin/MyModelGeneratorPlugin.class
+com/scaffold/bootservice/plugin/MyCommentGenerator.class
+com/scaffold/bootservice/plugin/MyIntrospectedTableMyBatis3Impl.class
+com/scaffold/bootservice/plugin/PropertyHelper.class
+com/scaffold/bootservice/plugin/IntrospectedTableHelper.class
