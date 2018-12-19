@@ -6,6 +6,8 @@
 /Users/dingrui/workspace/github/bootservice/src/main/java/com/scaffold/bootservice/plugin/XMLMapperMergePlugin.java
 /Users/dingrui/workspace/github/bootservice/src/main/java/com/scaffold/bootservice/helper/AnnotationHelper.java
 /Users/dingrui/workspace/github/bootservice/src/main/java/com/scaffold/bootservice/plugin/MyServiceGeneratorPlugin.java
+/Users/dingrui/workspace/github/bootservice/src/main/java/com/scaffold/bootservice/base/BaseModel.java
+/Users/dingrui/workspace/github/bootservice/src/main/java/com/scaffold/bootservice/plugin/MyControllerGeneratorPlugin.java
 /Users/dingrui/workspace/github/bootservice/src/main/java/com/scaffold/bootservice/plugin/PropertyHelper.java
 /Users/dingrui/workspace/github/bootservice/src/main/java/com/scaffold/bootservice/plugin/MyXMLMapperGenerator.java
 /Users/dingrui/workspace/github/bootservice/src/main/java/com/scaffold/bootservice/plugin/MyBaseServicePlugin.java

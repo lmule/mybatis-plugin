@@ -41,19 +41,19 @@ public class MyModelGeneratorPlugin extends PluginAdapter {
 
     private GeneratedJavaFile generatedModelFile(IntrospectedTable introspectedTable) {
         if (!isOverwrite) {
-            File modelFile = new File(IntrospectedTableHelper.getFullFilePath(introspectedTable, modelSuffixName));
+            File modelFile = new File(IntrospectedTableHelper.getModelFilePath(introspectedTable, modelSuffixName));
             if (modelFile.exists()) {
                 return null;
             }
         }
 
         String recordType = introspectedTable.getBaseRecordType();
-        String modelName = IntrospectedTableHelper.getCamelizeTableName(introspectedTable) + modelSuffixName;
+        String modelName = IntrospectedTableHelper.getCamelizedTableName(introspectedTable) + modelSuffixName;
         FullyQualifiedJavaType modelQualifiedType = new FullyQualifiedJavaType(targetPackage + "." + modelName);
         TopLevelClass modelTopLevelClass = new TopLevelClass(modelQualifiedType);
         modelTopLevelClass.setVisibility(JavaVisibility.PUBLIC);
-        modelTopLevelClass.addImportedType(new FullyQualifiedJavaType(recordType));
-        modelTopLevelClass.setSuperClass(new FullyQualifiedJavaType(recordType));
+        modelTopLevelClass.addImportedType(recordType);
+        modelTopLevelClass.setSuperClass(recordType);
 
         JavaFormatter javaFormatter = new DefaultJavaFormatter();
         javaFormatter.setContext(context);

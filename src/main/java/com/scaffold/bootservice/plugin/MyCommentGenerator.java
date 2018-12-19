@@ -54,7 +54,7 @@ public class MyCommentGenerator implements CommentGenerator {
 
     @Override
     public void addGeneralMethodAnnotation(Method method, IntrospectedTable introspectedTable, Set<FullyQualifiedJavaType> set) {
-
+        int a = 1;
     }
 
     @Override
@@ -74,6 +74,7 @@ public class MyCommentGenerator implements CommentGenerator {
 
     @Override
     public void addClassAnnotation(InnerClass innerClass, IntrospectedTable introspectedTable, Set<FullyQualifiedJavaType> set) {
+        int a = 1;
     }
 
     public void addConfigurationProperties(Properties properties) {
@@ -111,13 +112,13 @@ public class MyCommentGenerator implements CommentGenerator {
 //        javaElement.addJavaDocLine(sb.toString());
     }
 
-    protected String getDateString() {
-        if (this.suppressDate) {
-            return null;
-        } else {
-            return this.dateFormat != null ? this.dateFormat.format(new Date()) : (new Date()).toString();
-        }
-    }
+//    protected String getDateString() {
+//        if (this.suppressDate) {
+//            return null;
+//        } else {
+//            return this.dateFormat != null ? this.dateFormat.format(new Date()) : (new Date()).toString();
+//        }
+//    }
 
     public void addClassComment(InnerClass innerClass, IntrospectedTable introspectedTable) {
         this.addClassComment(innerClass, introspectedTable, false);

@@ -6,7 +6,6 @@ import org.mybatis.generator.api.JavaFormatter;
 import org.mybatis.generator.api.PluginAdapter;
 import org.mybatis.generator.api.dom.DefaultJavaFormatter;
 import org.mybatis.generator.api.dom.java.FullyQualifiedJavaType;
-import org.mybatis.generator.api.dom.java.Interface;
 import org.mybatis.generator.api.dom.java.JavaVisibility;
 import org.mybatis.generator.api.dom.java.TopLevelClass;
 
@@ -22,57 +21,68 @@ public class MyServiceGeneratorPlugin extends PluginAdapter {
     private String daoSuffixName;
     private String serviceSuffixName;
     private String rootClass;
-    private String targetPackage;
-    private String targetProject;
+    private String serviceTargetPackage;
+    private String serviceTargetProject;
 
     @Override
     public boolean validate(List<String> list) {
         modelSuffixName = PropertyHelper.getModelSuffixName(context);
         daoSuffixName = PropertyHelper.getDaoSuffixName(context);
         serviceSuffixName = PropertyHelper.getServiceSuffixName(properties);
-        targetPackage = PropertyHelper.valueFromProperties(properties, "targetPackage");
-        targetProject = PropertyHelper.valueFromProperties(properties, "targetProject");
+        serviceTargetPackage = PropertyHelper.valueFromProperties(properties, "targetPackage");
+        serviceTargetProject = PropertyHelper.valueFromProperties(properties, "targetProject");
         rootClass = PropertyHelper.valueFromProperties(properties, "rootClass");
 
-        return stringHasValue(targetPackage)
-                && stringHasValue(targetProject);
+        return stringHasValue(serviceTargetPackage)
+                && stringHasValue(serviceTargetProject);
     }
 
     @Override
     public List<GeneratedJavaFile> contextGenerateAdditionalJavaFiles(IntrospectedTable introspectedTable) {
         List<GeneratedJavaFile> files = new ArrayList<>();
-        GeneratedJavaFile generatedJavaFile = generatedModelFile(introspectedTable);
+        GeneratedJavaFile generatedJavaFile = generatedServiceFile(introspectedTable);
         if (null != generatedJavaFile) {
             files.add(generatedJavaFile);
         }
         return files;
     }
 
-    private GeneratedJavaFile generatedModelFile(IntrospectedTable introspectedTable) {
-        String serviceName = IntrospectedTableHelper.getCamelizeTableName(introspectedTable) + serviceSuffixName;
-        FullyQualifiedJavaType serviceFullyQualifiedJavaType = new FullyQualifiedJavaType(targetPackage + "." + serviceName);
+    private GeneratedJavaFile generatedServiceFile(IntrospectedTable introspectedTable) {
+        String camelizedTableName = IntrospectedTableHelper.getCamelizedTableName(introspectedTable);
+        File serviceFile = new File(IntrospectedTableHelper.getServiceFilePath(serviceTargetProject,
+                serviceTargetPackage,
+                camelizedTableName,
+                serviceSuffixName));
+        if (serviceFile.exists()) {
+            return null;
+        }
+        String serviceName = camelizedTableName + serviceSuffixName;
+        FullyQualifiedJavaType serviceFullyQualifiedJavaType = new FullyQualifiedJavaType(serviceTargetPackage + "." + serviceName);
 
-//        String recordType = introspectedTable.getBaseRecordType();
         TopLevelClass modelTopLevelClass = new TopLevelClass(serviceFullyQualifiedJavaType);
         modelTopLevelClass.setVisibility(JavaVisibility.PUBLIC);
-        modelTopLevelClass.addImportedType(serviceFullyQualifiedJavaType);
+        modelTopLevelClass.addImportedType(new FullyQualifiedJavaType(rootClass));
 
 
-//        Interface interfaze = new Interface(daoFullyQualifiedJavaType);
-//        interfaze.setVisibility(JavaVisibility.PUBLIC);
-//        String modelName = IntrospectedTableHelper.getCamelizeTableName(introspectedTable) + modelSuffixName;
-//        interfaze.addImportedType(new FullyQualifiedJavaType(modelTargetPackage + "." + modelName));
         if (stringHasValue(rootClass)) {
             modelTopLevelClass.setSuperClass(rootClass);
-            String modelName = IntrospectedTableHelper.getCamelizeTableName(introspectedTable) + modelSuffixName;
-            String daoName = IntrospectedTableHelper.getCamelizeTableName(introspectedTable) + daoSuffixName;
+
+            String modelName = camelizedTableName + modelSuffixName;
+            String modelTargetPackage = IntrospectedTableHelper.getModelConfigurationValue(context, "modelTargetPackage");
+            FullyQualifiedJavaType modelFullyQualifiedJavaType = new FullyQualifiedJavaType(modelTargetPackage + "." + modelName);
+            modelTopLevelClass.addImportedType(modelFullyQualifiedJavaType);
+
+            String daoName = camelizedTableName + daoSuffixName;
+            String daoTargetPackage = context.getSqlMapGeneratorConfiguration().getTargetPackage();
+            FullyQualifiedJavaType daoFullyQualifiedJavaType = new FullyQualifiedJavaType(daoTargetPackage + "." + daoName);
+            modelTopLevelClass.addImportedType(daoFullyQualifiedJavaType);
+
             String genericName = String.format("<%s, %s>", daoName, modelName);
             modelTopLevelClass.setSuperClass(new FullyQualifiedJavaType(rootClass + genericName));
-//            interfaze.addSuperInterface(new FullyQualifiedJavaType(rootInterface + genericName));
         }
 
         JavaFormatter javaFormatter = new DefaultJavaFormatter();
         javaFormatter.setContext(context);
-        return new GeneratedJavaFile(modelTopLevelClass, targetProject, javaFormatter);
+        return new GeneratedJavaFile(modelTopLevelClass, serviceTargetProject, javaFormatter);
     }
 }

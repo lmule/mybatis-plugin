@@ -33,7 +33,7 @@ public class PropertyHelper {
      * @return
      */
     public static String getModelSuffixName(Context context) {
-        return IntrospectedTableHelper.getModelConfigurationValue(context, "modelSuffixName", "Model");
+        return IntrospectedTableHelper.getModelConfigurationValue(context, "suffixName", "Model");
     }
 
     /**
@@ -42,7 +42,7 @@ public class PropertyHelper {
      * @return
      */
     public static String getDaoSuffixName(Context context) {
-        return IntrospectedTableHelper.getDaoConfigurationValue(context, "daoSuffixName", "Dao");
+        return IntrospectedTableHelper.getDaoConfigurationValue(context, "suffixName", "Dao");
     }
 
     /**
@@ -51,7 +51,15 @@ public class PropertyHelper {
      * @return
      */
     public static String getServiceSuffixName(Properties properties) {
-        return PropertyHelper.valueFromProperties(properties, "serviceSuffixName", "Service");
+        return PropertyHelper.valueFromProperties(properties, "suffixName", "Service");
     }
 
+    /**
+     * 获取controller文件后缀
+     * @param properties
+     * @return
+     */
+    public static String getControllerSuffixName(Properties properties) {
+        return PropertyHelper.valueFromProperties(properties, "suffixName", "Controller");
+    }
 }

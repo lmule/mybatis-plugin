@@ -90,7 +90,7 @@ public class ExistedXmlElementGenerator extends AbstractXmlElementGenerator {
                 type = attributes.getNamedItem("type").getNodeValue();
             }
             String modelPackage = introspectedTable.getContext().getJavaModelGeneratorConfiguration().getTargetPackage() + "." +
-                    IntrospectedTableHelper.getCamelizeTableName(introspectedTable);
+                    IntrospectedTableHelper.getCamelizedTableName(introspectedTable);
             if (!type.equals(modelPackage)) {
                 continue;
             }
@@ -102,7 +102,7 @@ public class ExistedXmlElementGenerator extends AbstractXmlElementGenerator {
 
     private Document getExistedDocument() {
         try {
-            String path = IntrospectedTableHelper.getXmlMapperPath(introspectedTable);
+            String path = IntrospectedTableHelper.getXmlMapperFilePath(introspectedTable);
             InputSource inputSource =new InputSource(new InputStreamReader(new FileInputStream(path), "UTF-8"));
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
             factory.setExpandEntityReferences(false);

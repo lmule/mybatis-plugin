@@ -1,7 +1,9 @@
+com/scaffold/bootservice/plugin/MyControllerGeneratorPlugin.class
 com/scaffold/bootservice/Application.class
 com/scaffold/bootservice/helper/AnnotationHelper.class
 com/scaffold/bootservice/plugin/MyXMLMapperGenerator.class
 com/scaffold/bootservice/plugin/MyBaseServicePlugin.class
+com/scaffold/bootservice/base/BaseModel.class
 com/scaffold/bootservice/plugin/ExistedXmlElementGenerator$1.class
 com/scaffold/bootservice/plugin/MyDaoGeneratorPlugin.class
 com/scaffold/bootservice/plugin/ExistedXmlElementGenerator$NullEntityResolver.class

@@ -3,18 +3,18 @@ package com.scaffold.bootservice.plugin;
 import org.mybatis.generator.api.IntrospectedColumn;
 import org.mybatis.generator.api.IntrospectedTable;
 import org.mybatis.generator.config.Context;
+import org.mybatis.generator.config.JavaModelGeneratorConfiguration;
 import org.mybatis.generator.config.PropertyHolder;
 import org.mybatis.generator.config.SqlMapGeneratorConfiguration;
 
 import java.util.List;
-import java.util.Properties;
 
 import static org.mybatis.generator.internal.util.StringUtility.stringHasValue;
 
 public class IntrospectedTableHelper {
 
 
-    public static String getCamelizeTableName(IntrospectedTable introspectedTable) {
+    public static String getCamelizedTableName(IntrospectedTable introspectedTable) {
         String recordType = introspectedTable.getBaseRecordType();
         return recordType.substring(recordType.lastIndexOf(".") + 1, recordType.length());
     }
@@ -29,15 +29,20 @@ public class IntrospectedTableHelper {
     }
 
     /**
-     * 获取生成文件的base相对物理路径
-     * @param introspectedTable
+     *
+     * @param targetProject
+     * @param targetPackage
      * @return
      */
-    public static String getPhysicalBasePath(IntrospectedTable introspectedTable) {
-        SqlMapGeneratorConfiguration configuration = introspectedTable.getContext().getSqlMapGeneratorConfiguration();
-        String targetPackage = configuration.getTargetPackage();
-        String targetProject = configuration.getTargetProject();
+    private static String getPhysicalBasePath(String targetProject, String targetPackage) {
         return targetProject + "/" + targetPackage.replace(".", "/") + "/";
+    }
+
+    public static String getModelFilePath(IntrospectedTable introspectedTable, String suffixName) {
+        JavaModelGeneratorConfiguration configuration = introspectedTable.getContext().getJavaModelGeneratorConfiguration();
+        String targetPackage = configuration.getProperty("modelTargetPackage");
+        String targetProject = configuration.getTargetProject();
+        return getPhysicalBasePath(targetProject, targetPackage) + getCamelizedTableName(introspectedTable) + suffixName + ".java";
     }
 
     /**
@@ -45,18 +50,26 @@ public class IntrospectedTableHelper {
      * @param introspectedTable
      * @return
      */
-    public static String getXmlMapperPath(IntrospectedTable introspectedTable) {
-        return getPhysicalBasePath(introspectedTable) + getCamelizeTableName(introspectedTable) + "Mapper.xml";
+    public static String getXmlMapperFilePath(IntrospectedTable introspectedTable) {
+        SqlMapGeneratorConfiguration configuration = introspectedTable.getContext().getSqlMapGeneratorConfiguration();
+        String targetPackage = configuration.getTargetPackage();
+        String targetProject = configuration.getTargetProject();
+        return getPhysicalBasePath(targetProject, targetPackage) + getCamelizedTableName(introspectedTable) + "Mapper.xml";
     }
 
-    /**
-     * 获取文件名全路径
-     * @param introspectedTable
-     * @param suffix
-     * @return
-     */
-    public static String getFullFilePath(IntrospectedTable introspectedTable, String suffix) {
-        return getPhysicalBasePath(introspectedTable) + getCamelizeTableName(introspectedTable) + suffix + ".java";
+    public static String getDaoFilePath(IntrospectedTable introspectedTable, String suffixName) {
+        SqlMapGeneratorConfiguration configuration = introspectedTable.getContext().getSqlMapGeneratorConfiguration();
+        String targetPackage = configuration.getTargetPackage();
+        String targetProject = configuration.getTargetProject();
+        return getPhysicalBasePath(targetProject, targetPackage) + getCamelizedTableName(introspectedTable) + suffixName + ".java";
+    }
+
+    public static String getServiceFilePath(String targetProject, String targetPackage, String camelizedTableName, String suffixName) {
+        return getPhysicalBasePath(targetProject, targetPackage) + camelizedTableName + suffixName + ".java";
+    }
+
+    public static String getControllerFilePath(String targetProject, String targetPackage, String camelizedTableName, String suffixName) {
+        return getPhysicalBasePath(targetProject, targetPackage) + camelizedTableName + suffixName + ".java";
     }
 
 
