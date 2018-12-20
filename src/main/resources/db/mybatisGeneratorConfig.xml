@@ -6,21 +6,20 @@
 <generatorConfiguration>
     <properties  resource="application.properties" />
     <!--数据库驱动jar -->
-    <classPathEntry
-            location="src/main/resources/db/mysql-connector-java-5.1.47.jar" />
+    <classPathEntry location="src/main/resources/db/mysql-connector-java-5.1.47.jar" />
 
     <context id="Tables" targetRuntime="com.scaffold.bootservice.plugin.MyIntrospectedTableMyBatis3Impl">
         <plugin type="com.scaffold.bootservice.plugin.XMLMapperMergePlugin" />
         <plugin type="com.scaffold.bootservice.plugin.MyModelGeneratorPlugin" />
         <plugin type="com.scaffold.bootservice.plugin.MyDaoGeneratorPlugin" />
         <plugin type="com.scaffold.bootservice.plugin.MyServiceGeneratorPlugin">
-            <property name="rootClass" value="ibatisData.ff.BaseMapper"></property>
+            <property name="rootClass" value="com.scaffold.bootservice.base.BaseService" />
             <property name="suffixName" value="Service"></property>
             <property name="targetPackage" value="com.scaffold.bootservice.service"></property>
             <property name="targetProject" value="src/main/java"></property>
         </plugin>
         <plugin type="com.scaffold.bootservice.plugin.MyControllerGeneratorPlugin">
-            <property name="rootClass" value="ibatisData.ff.BaseController"></property>
+            <property name="rootClass" value="com.scaffold.bootservice.base.BaseController" />
             <property name="suffixName" value="Controller"></property>
             <property name="targetPackage" value="com.scaffold.bootservice.controller"></property>
             <property name="targetProject" value="src/main/java"></property>
@@ -46,14 +45,15 @@
 
         <javaModelGenerator targetPackage="com.scaffold.bootservice.model.entity"
                             targetProject="src/main/java">
-            <property name="enableSubPackages" value="true" />
+            <property name="enableSubPackages" value="false" />
             <property name="trimStrings" value="true" />
-            <property name="rootClass" value="BaseModel" />
+            <property name="rootClass" value="com.scaffold.bootservice.base.BaseModel" />
 
             <property name="suffixName" value="Model"></property>
             <property name="modelTargetPackage" value="com.scaffold.bootservice.model"></property>
             <property name="isOverwrite" value="false"></property>
         </javaModelGenerator>
+
 
         <sqlMapGenerator targetPackage="com.scaffold.bootservice.dao"
                          targetProject="src/main/java">
@@ -61,7 +61,7 @@
 
             <property name="suffixName" value="Dao"></property>
             <property name="isOverwrite" value="false"></property>
-            <property name="rootInterface" value="a.abc" />
+            <property name="rootInterface" value="com.scaffold.bootservice.base.BaseDao" />
         </sqlMapGenerator>
         <table tableName="page_type"
         />

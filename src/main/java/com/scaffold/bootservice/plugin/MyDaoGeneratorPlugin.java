@@ -35,8 +35,7 @@ public class MyDaoGeneratorPlugin extends PluginAdapter {
         modelTargetPackage = IntrospectedTableHelper.getModelConfigurationValue(context, "modelTargetPackage");
         isOverwrite = Boolean.parseBoolean(IntrospectedTableHelper.getDaoConfigurationValue(context, "isOverwrite", "false"));
 
-        return stringHasValue(rootInterface)
-                && stringHasValue(modelTargetPackage)
+        return stringHasValue(modelTargetPackage)
                 && stringHasValue(targetPackage)
                 && stringHasValue(targetProject);
     }
@@ -65,12 +64,15 @@ public class MyDaoGeneratorPlugin extends PluginAdapter {
 
         Interface interfaze = new Interface(daoFullyQualifiedJavaType);
         interfaze.setVisibility(JavaVisibility.PUBLIC);
-        String modelName = IntrospectedTableHelper.getCamelizedTableName(introspectedTable) + modelSuffixName;
-        interfaze.addImportedType(new FullyQualifiedJavaType(modelTargetPackage + "." + modelName));
-        interfaze.addImportedType(new FullyQualifiedJavaType(rootInterface));
         if (stringHasValue(rootInterface)) {
-            String primaryKeyJavaType = IntrospectedTableHelper.getPrimaryKeyJavaType(introspectedTable);
-            String genericName = String.format("<%s, %s>", modelName, primaryKeyJavaType);
+            String modelName = IntrospectedTableHelper.getCamelizedTableName(introspectedTable) + modelSuffixName;
+            interfaze.addImportedType(new FullyQualifiedJavaType(modelTargetPackage + "." + modelName));
+
+            interfaze.addImportedType(new FullyQualifiedJavaType(rootInterface));
+
+//            String primaryKeyJavaType = IntrospectedTableHelper.getPrimaryKeyJavaType(introspectedTable);
+//            String genericName = String.format("<%s, %s>", modelName, primaryKeyJavaType);
+            String genericName = String.format("<%s>", modelName);
             interfaze.addSuperInterface(new FullyQualifiedJavaType(rootInterface + genericName));
         }
 
