@@ -5,14 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c64f0e03-f672-4c56-a824-771a1970e5d7" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/scaffold/bootservice/base/BaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scaffold/bootservice/base/BaseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/scaffold/bootservice/plugin/MyIntrospectedTableMyBatis3Impl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scaffold/bootservice/plugin/MyIntrospectedTableMyBatis3Impl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/db/mybatisGeneratorConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/mybatisGeneratorConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/db/mybatisGeneratorConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/db/mybatisGeneratorConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -32,16 +25,21 @@
         <entry file="file://$PROJECT_DIR$/src/main/resources/db/mybatisGeneratorConfig.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="164">
-              <caret line="11" column="48" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyBatisGenerator.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/../../daojia/code/_java_/MavenReporsitory/org/mybatis/generator/mybatis-generator-core/1.3.7/mybatis-generator-core-1.3.7.jar!/org/mybatis/generator/api/MyBatisGenerator.class">
+      <file leaf-file-name="XMLMapperMergePlugin.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/scaffold/bootservice/plugin/XMLMapperMergePlugin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="59" selection-start-line="59" selection-end-line="59" />
+            <state relative-caret-position="285">
+              <caret line="19" column="21" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#373#374#0" expanded="true" />
+                <element signature="e#400#401#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -49,8 +47,17 @@
       <file leaf-file-name="Configuration.class" pinned="false" current-in-tab="false">
         <entry file="jar://$PROJECT_DIR$/../../daojia/code/_java_/MavenReporsitory/org/mybatis/generator/mybatis-generator-core/1.3.7/mybatis-generator-core-1.3.7.jar!/org/mybatis/generator/config/Configuration.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="51" column="27" lean-forward="true" selection-start-line="51" selection-start-column="27" selection-end-line="51" selection-end-column="27" />
+            <state relative-caret-position="198">
+              <caret line="51" column="28" selection-start-line="51" selection-start-column="28" selection-end-line="51" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Context.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/../../daojia/code/_java_/MavenReporsitory/org/mybatis/generator/mybatis-generator-core/1.3.7/mybatis-generator-core-1.3.7.jar!/org/mybatis/generator/config/Context.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="98">
+              <caret line="92" column="4" selection-start-line="92" selection-start-column="4" selection-end-line="92" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -58,8 +65,8 @@
       <file leaf-file-name="MyIntrospectedTableMyBatis3Impl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/scaffold/bootservice/plugin/MyIntrospectedTableMyBatis3Impl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="379">
-              <caret line="26" column="45" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="45" />
+            <state relative-caret-position="345">
+              <caret line="23" column="46" selection-start-line="23" selection-start-column="46" selection-end-line="23" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -93,15 +100,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="369">
               <caret line="59" selection-start-line="59" selection-end-line="59" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JDBCConnectionConfiguration.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/../../daojia/code/_java_/MavenReporsitory/org/mybatis/generator/mybatis-generator-core/1.3.7/mybatis-generator-core-1.3.7.jar!/org/mybatis/generator/config/JDBCConnectionConfiguration.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="369">
-              <caret line="79" selection-start-line="79" selection-end-line="79" />
             </state>
           </provider>
         </entry>
@@ -344,6 +342,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="bootservice" type="462c0819:PsiDirectoryNode" />
+              <item name="helper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bootservice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bootservice" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="bootservice" type="462c0819:PsiDirectoryNode" />
               <item name="plugin" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -536,7 +543,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="281764000" />
+    <option name="totallyTimeSpent" value="281908000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -548,50 +555,64 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1441" y="23" width="1920" height="1057" extended-state="0" />
+    <frame x="0" y="23" width="1680" height="1027" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="0" sideWeight="0.5007153" side_tool="true" weight="0.2985469" />
-      <window_info anchor="right" id="Maven Projects" order="0" sideWeight="0.49848944" visible="true" weight="0.1315229" />
+      <window_info anchor="bottom" id="Event Log" order="0" sideWeight="0.5005325" side_tool="true" weight="0.3191035" />
+      <window_info anchor="right" id="Maven Projects" order="0" sideWeight="0.49848944" visible="true" weight="0.15079366" />
       <window_info anchor="bottom" id="Database Changes" order="1" show_stripe_button="false" />
       <window_info id="Capture Tool" order="7" />
       <window_info id="Designer" order="0" />
       <window_info anchor="right" id="Database" order="2" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info id="UI Designer" order="2" />
-      <window_info anchor="bottom" x="23" y="398" width="1398" height="302" id="Debug" order="13" weight="0.45144078" />
+      <window_info anchor="bottom" x="23" y="398" width="1398" height="302" id="Debug" order="13" weight="0.46637267" />
       <window_info anchor="bottom" id="TODO" order="12" weight="0.32947975" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="1" />
       <window_info anchor="bottom" id="Java Enterprise" order="3" weight="0.32985386" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="right" x="0" y="0" width="430" height="857" id="Documentation" sideWeight="0.50151056" side_tool="true" weight="0.1315229" />
-      <window_info anchor="bottom" id="Run" order="9" sideWeight="0.49928468" weight="0.34364995" />
+      <window_info active="true" anchor="bottom" id="Run" order="9" sideWeight="0.49928468" visible="true" weight="0.34288865" />
       <window_info anchor="bottom" id="Version Control" order="4" />
-      <window_info anchor="bottom" id="Spring" order="5" weight="0.32985386" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="6" visible="true" weight="0.3191035" />
-      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.4970646" visible="true" weight="0.21192758" />
+      <window_info anchor="bottom" id="Spring" order="5" sideWeight="0.49893504" weight="0.32977587" />
+      <window_info anchor="bottom" id="Terminal" order="6" sideWeight="0.49946752" weight="0.31863284" />
+      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.4970646" visible="true" weight="0.24297924" />
       <window_info anchor="right" id="Bean Validation" order="5" />
       <window_info id="Web" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="8" weight="0.32745314" />
       <window_info anchor="right" id="Theme Preview" order="4" />
       <window_info id="Favorites" order="3" sideWeight="0.5029354" side_tool="true" weight="0.26466382" />
-      <window_info anchor="bottom" id="Messages" order="2" weight="0.32985386" />
-      <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="7" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="0" sideWeight="0.5007153" side_tool="true" weight="0.2985469" />
+      <window_info anchor="right" id="Ant Build" order="8" weight="0.25" />
+      <window_info anchor="bottom" id="Java Enterprise" order="3" weight="0.32985386" />
+      <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info anchor="right" id="Maven Projects" order="0" sideWeight="0.49848944" visible="true" weight="0.1315229" />
+      <window_info anchor="bottom" id="Database Changes" order="1" show_stripe_button="false" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="9" weight="0.25" />
+      <window_info id="Image Layers" order="1" />
+      <window_info anchor="right" id="Database" order="2" />
+      <window_info id="Capture Tool" order="7" />
+      <window_info anchor="right" id="Capture Analysis" order="1" />
+      <window_info anchor="bottom" id="TODO" order="12" weight="0.32947975" />
+      <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
+      <window_info id="UI Designer" order="2" />
+      <window_info anchor="bottom" x="23" y="398" width="1398" height="302" id="Debug" order="13" weight="0.45144078" />
+      <window_info anchor="bottom" id="Messages" order="2" weight="0.32985386" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="7" type="SLIDING" weight="0.4" />
+      <window_info id="Designer" order="0" />
     </layout>
     <layout-to-restore>
       <window_info id="Designer" order="0" />
       <window_info anchor="right" id="Palette" order="6" />
-      <window_info anchor="bottom" id="Run" order="9" sideWeight="0.49928468" weight="0.35667107" />
       <window_info anchor="bottom" id="Spring" order="5" weight="0.32985386" />
       <window_info id="Image Layers" order="1" />
-      <window_info anchor="bottom" id="Find" order="8" weight="0.32760897" />
+      <window_info anchor="bottom" id="Run" order="9" sideWeight="0.49928468" weight="0.35667107" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="8" weight="0.25" />
       <window_info id="UI Designer" order="2" />
@@ -616,8 +637,9 @@
       <window_info anchor="right" id="Theme Preview" order="4" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
-      <window_info active="true" anchor="bottom" x="23" y="398" width="1398" height="302" id="Debug" order="13" visible="true" weight="0.4359313" />
+      <window_info anchor="bottom" id="Find" order="8" weight="0.32760897" />
       <window_info anchor="right" id="Bean Validation" order="5" />
+      <window_info active="true" anchor="bottom" x="23" y="398" width="1398" height="302" id="Debug" order="13" visible="true" weight="0.4359313" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -795,16 +817,7 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/scaffold/bootservice/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/scaffold/bootservice/controller/UserController.java" />
     <entry file="jar://$PROJECT_DIR$/../../daojia/code/_java_/MavenReporsitory/org/mybatis/generator/mybatis-generator-core/1.3.7/mybatis-generator-core-1.3.7.jar!/org/mybatis/generator/codegen/mybatis3/IntrospectedTableMyBatis3Impl.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -833,9 +846,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="142">
           <caret line="55" column="23" selection-start-line="55" selection-start-column="23" selection-end-line="55" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -843,9 +853,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
           <caret line="44" column="68" selection-start-line="44" selection-start-column="68" selection-end-line="44" selection-end-column="68" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -860,10 +867,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="226">
           <caret line="441" column="25" selection-start-line="441" selection-start-column="25" selection-end-line="441" selection-end-column="25" />
-          <folding>
-            <element signature="e#15397#15398#0" expanded="true" />
-            <element signature="e#15443#15444#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -892,13 +895,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/scaffold/bootservice/dao/client/PageTypeMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="16" column="27" lean-forward="true" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/scaffold/bootservice/dao/client/PageTypeMapper.java" />
     <entry file="jar://$PROJECT_DIR$/../../daojia/code/_java_/MavenReporsitory/org/mybatis/generator/mybatis-generator-core/1.3.7/mybatis-generator-core-1.3.7.jar!/org/mybatis/generator/codegen/mybatis3/model/PrimaryKeyGenerator.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1020">
@@ -938,19 +935,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="335">
           <caret line="30" selection-start-line="30" selection-end-line="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/scaffold/bootservice/service/PageTypeService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/scaffold/bootservice/service/PageTypeService.java" />
     <entry file="jar://$PROJECT_DIR$/../../daojia/code/_java_/MavenReporsitory/org/mybatis/generator/mybatis-generator-core/1.3.7/mybatis-generator-core-1.3.7.jar!/org/mybatis/generator/codegen/mybatis3/model/SimpleModelGenerator.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-482">
@@ -958,13 +946,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/scaffold/bootservice/dao/PageTypeMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/scaffold/bootservice/dao/PageTypeMapper.xml" />
     <entry file="jar://$PROJECT_DIR$/../../daojia/code/_java_/MavenReporsitory/tk/mybatis/mapper-core/1.0.5/mapper-core-1.0.5.jar!/tk/mybatis/mapper/entity/Example.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-128">
@@ -993,93 +975,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/scaffold/bootservice/base/BaseService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/scaffold/bootservice/controller/PageTypeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="10" column="76" lean-forward="true" selection-start-line="10" selection-start-column="76" selection-end-line="10" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/scaffold/bootservice/model/PageTypeModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="38" lean-forward="true" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/scaffold/bootservice/model/entity/PageType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/scaffold/bootservice/dao/PageTypeDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="66" selection-start-line="5" selection-start-column="66" selection-end-line="5" selection-end-column="66" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/scaffold/bootservice/base/BaseModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/scaffold/bootservice/base/BaseDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="41" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/scaffold/bootservice/base/BaseService.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/scaffold/bootservice/controller/PageTypeController.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/scaffold/bootservice/model/PageTypeModel.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/scaffold/bootservice/model/entity/PageType.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/scaffold/bootservice/dao/PageTypeDao.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/scaffold/bootservice/base/BaseModel.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/scaffold/bootservice/base/BaseDao.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/scaffold/bootservice/plugin/MyDaoGeneratorPlugin.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="196">
           <caret line="73" column="31" selection-start-line="73" selection-start-column="31" selection-end-line="73" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/scaffold/bootservice/base/BaseController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="22" column="34" lean-forward="true" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/scaffold/bootservice/base/BaseController.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/scaffold/bootservice/plugin/XMLMapperMergePlugin.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
-          <caret line="21" column="30" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
+          <caret line="19" column="21" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#373#374#0" expanded="true" />
+            <element signature="e#400#401#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1163,14 +1081,8 @@
     </entry>
     <entry file="jar://$PROJECT_DIR$/../../daojia/code/_java_/MavenReporsitory/org/mybatis/generator/mybatis-generator-core/1.3.7/mybatis-generator-core-1.3.7.jar!/org/mybatis/generator/config/Context.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="73">
-          <caret line="192" column="61" lean-forward="true" selection-start-line="192" selection-start-column="61" selection-end-line="192" selection-end-column="61" />
-          <folding>
-            <element signature="e#6172#6173#0" expanded="true" />
-            <element signature="e#6200#6201#0" expanded="true" />
-            <element signature="e#7231#7232#0" expanded="true" />
-            <element signature="e#7275#7276#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="98">
+          <caret line="92" column="4" selection-start-line="92" selection-start-column="4" selection-end-line="92" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -1186,8 +1098,8 @@
     </entry>
     <entry file="jar://$PROJECT_DIR$/../../daojia/code/_java_/MavenReporsitory/org/mybatis/generator/mybatis-generator-core/1.3.7/mybatis-generator-core-1.3.7.jar!/org/mybatis/generator/config/Configuration.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="51" column="27" lean-forward="true" selection-start-line="51" selection-start-column="27" selection-end-line="51" selection-end-column="27" />
+        <state relative-caret-position="198">
+          <caret line="51" column="28" selection-start-line="51" selection-start-column="28" selection-end-line="51" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -1203,8 +1115,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/scaffold/bootservice/plugin/MyIntrospectedTableMyBatis3Impl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="26" column="45" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="45" />
+        <state relative-caret-position="345">
+          <caret line="23" column="46" selection-start-line="23" selection-start-column="46" selection-end-line="23" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1214,7 +1126,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/db/mybatisGeneratorConfig.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="164">
-          <caret line="11" column="48" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>

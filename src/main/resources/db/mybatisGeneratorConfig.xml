@@ -8,8 +8,7 @@
     <!--数据库驱动jar -->
     <classPathEntry location="src/main/resources/db/mysql-connector-java-5.1.47.jar" />
 
-    <!--<context id="Tables" targetRuntime="com.scaffold.bootservice.plugin.MyIntrospectedTableMyBatis3Impl">-->
-    <context id="Tables" targetRuntime="MyBatis3">
+    <context id="Tables" targetRuntime="com.scaffold.bootservice.plugin.MyIntrospectedTableMyBatis3Impl">
         <plugin type="com.scaffold.bootservice.plugin.XMLMapperMergePlugin" />
         <plugin type="com.scaffold.bootservice.plugin.MyModelGeneratorPlugin" />
         <plugin type="com.scaffold.bootservice.plugin.MyDaoGeneratorPlugin" />
