@@ -14,7 +14,8 @@ public class MyIntrospectedTableMyBatis3Impl extends IntrospectedTableMyBatis3Im
 
     @Override
     protected void calculateXmlMapperGenerator(AbstractJavaClientGenerator javaClientGenerator, List<String> warnings, ProgressCallback progressCallback) {
-        xmlMapperGenerator = new MyXMLMapperGenerator();
+//        xmlMapperGenerator = new MyXMLMapperGenerator();
+        xmlMapperGenerator = new XMLMapperGenerator();
         initializeAbstractGenerator(xmlMapperGenerator, warnings, progressCallback);
     }
 
